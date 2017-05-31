@@ -913,6 +913,15 @@ tmp/modules/TrackPileUpSubtractor.$(ObjSuf): \
 	external/ExRootAnalysis/ExRootResult.h \
 	external/ExRootAnalysis/ExRootFilter.h \
 	external/ExRootAnalysis/ExRootClassifier.h
+tmp/modules/TrackPileUpSubtractorWithTiming.$(ObjSuf): \
+	modules/TrackPileUpSubtractorWithTiming.$(SrcSuf) \
+	modules/TrackPileUpSubtractorWithTiming.h \
+	classes/DelphesClasses.h \
+	classes/DelphesFactory.h \
+	classes/DelphesFormula.h \
+	external/ExRootAnalysis/ExRootResult.h \
+	external/ExRootAnalysis/ExRootFilter.h \
+	external/ExRootAnalysis/ExRootClassifier.h
 tmp/modules/TrackSmearing.$(ObjSuf): \
 	modules/TrackSmearing.$(SrcSuf) \
 	modules/TrackSmearing.h \
@@ -1065,6 +1074,7 @@ DELPHES_OBJ +=  \
 	tmp/modules/TrackCountingBTagging.$(ObjSuf) \
 	tmp/modules/TrackCountingTauTagging.$(ObjSuf) \
 	tmp/modules/TrackPileUpSubtractor.$(ObjSuf) \
+	tmp/modules/TrackPileUpSubtractorWithTiming.$(ObjSuf) \
 	tmp/modules/TrackSmearing.$(ObjSuf) \
 	tmp/modules/TreeWriter.$(ObjSuf) \
 	tmp/modules/UniqueObjectFinder.$(ObjSuf) \
@@ -2058,6 +2068,10 @@ modules/TaggingParticlesSkimmer.h: \
 
 external/fastjet/internal/BasicRandom.hh: \
 	external/fastjet/internal/base.hh
+	@touch $@
+
+modules/TrackPileUpSubtractorWithTiming.h: \
+	classes/DelphesModule.h
 	@touch $@
 
 modules/SimpleCalorimeter.h: \

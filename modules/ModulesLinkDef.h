@@ -53,6 +53,7 @@
 #include "modules/PileUpMerger.h"
 #include "modules/JetPileUpSubtractor.h"
 #include "modules/TrackPileUpSubtractor.h"
+#include "modules/TrackPileUpSubtractorWithTiming.h"
 #include "modules/TaggingParticlesSkimmer.h"
 #include "modules/PileUpJetID.h"
 #include "modules/ConstituentFilter.h"
@@ -104,6 +105,7 @@
 #pragma link C++ class PileUpMerger+;
 #pragma link C++ class JetPileUpSubtractor+;
 #pragma link C++ class TrackPileUpSubtractor+;
+#pragma link C++ class TrackPileUpSubtractorWithTiming+;
 #pragma link C++ class TaggingParticlesSkimmer+;
 #pragma link C++ class PileUpJetID+;
 #pragma link C++ class ConstituentFilter+;
